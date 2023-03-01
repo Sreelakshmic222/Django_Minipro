@@ -1,0 +1,10 @@
+body{
+background: url({% static "static/images/Back.jpg" %}) 100% 0 no-repeat fixed;
+}
+.im
+{
+width:100%;
+height:100vh;
+background-position:cover;
+background-position:center;
+}

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+  <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+</head>
+<body style="background:url('https://i.pinimg.com/originals/95/33/1c/95331c10db63928fca2420865446fb62.jpg')no-repeat;background-size:cover;">
+<div class="container">
+
+
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a class="nav-link" href="{% url 'signin' %}">Login</a>
+            </li>
+            <li>Register</li>
+        </ul>
+    </nav>
+    </div>
+<div>
+<H1>Eat24X7</H1>
+</div>
+<div>
+<a class="nav-link" href="{% url 'index' %}"><Button type="button" id="button">View Menu!</Button></a>
+</div>
+</body>
+</html>
