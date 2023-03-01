@@ -19,3 +19,13 @@ class Dashboard(View):
             'total_orders':len(orders)
         }
         return render(request,'restaurant/dashboard.html',context)
+
+class OrderDetails(View):
+    def get(self,request,pk,*args,**kwargs):
+        order=OrderModel.objects.get(pk=pk)
+        context={
+            'order':order
+        }
+        return render(request,'restaurant/order-detail.html',context)
+
+
