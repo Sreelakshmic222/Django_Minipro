@@ -15,16 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from customer.views import Index ,About,Order,signin,signup,home
+from customer.views import Index ,About,Order,signin,signup,home,MenuSearch,Menu
 from django.conf.urls.static import static
 from django.conf import settings
 
+# from Eat24x7pro.customer.views import Menu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/',include('restaurant.urls')),
     path('',Index.as_view(),name='index'),
     path('about/',About.as_view(),name='about'),
+    path('menu/',Menu.as_view(),name='menu'),
+    path('menu/search/',MenuSearch.as_view(),name='menu-search'),
     path('order/',Order.as_view(),name='order'),
     path('signin/',signin,name='signin'),
     path('signup/',signup,name='signup'),
