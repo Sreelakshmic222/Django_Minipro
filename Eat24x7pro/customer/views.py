@@ -1,13 +1,28 @@
+
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.db.models.fields import json
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 from django.db.models import Q
 from django.core.mail import send_mail
 from .models import MenuItem, OrderModel,Category
+from Eat24x7pro import settings
 
 """Import Generic View Class"""
+
+def mail(request):
+    subject="Order Placed Successfully"
+    msg="Thank You For Your Order! Visit Again"
+    to="sreelakshmic222@gmail.com"
+    res=send_mail(subject,msg,settings.EMAIL_HOST_USER,[to])
+    if res==1:
+        msg="Mail sent Successfully"
+    else:
+        msg="Mail could not sent"
+    return HttpResponse(msg)
 
 
 class Index(View):
@@ -70,21 +85,44 @@ class Order(View):
 
         order = OrderModel.objects.create(price=price,name=name,email=email,street=street,city=city,state=state,zip_code=zip_code)
         order.items.add(*item_ids)
-        #Confirmation email after all completes
-        body=('Thank Yoou for your Order! Your food is Coming\n'
-              f'Your total:{price}\n'
-              'Thank you again for your Order!')
-        send_mail('Thank You For Your Order!',body,'example@example.com',
-                  [email],
-        )
-
 
         context = {
             'items': order_items['items'],
             'price': price
         }
+        return redirect('order-confirmation',pk=order.pk)
+        # return render(request, 'customer/order_confirmation.html', context)
 
-        return render(request, 'customer/order_confirmation.html', context)
+class OrderConfirmation(View):
+    def get(self,request,pk,*args,**kwargs):
+        order=OrderModel.objects.get(pk=pk)
+
+        context={
+            'pk':order.pk,
+            'items':order.items,
+            'price':order.price
+        }
+        return render(request,'customer/order_confirmation.html',context)
+
+    def post(self,request,pk,*args,**kwargs):
+        data=json.loads(request.body)
+
+        if data['isPaid']:
+            order=OrderModel.objects.get(pk=pk)
+            order.is_paid=True
+            order.save()
+
+        return redirect('payment-confirmation')
+
+
+class OrderPayConfirmation(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'customer/order_pay_confirmation.html')
+
+
+
+
+
 
 def signup(request):
     if request.method == 'POST':
