@@ -67,14 +67,7 @@ body {
 	border-color: #26bb84;
 	background: red;
 }
-.navbar .search-form {
-	display: inline-block;
-}
-.navbar .search-form .btn {
-	margin-left: 4px;
-}
-.navbar .search-form .form-control {
-	border-radius: 2px;
+
 }
 .navbar .login-form .input-group {
 	margin-right: 4px;
@@ -161,21 +154,21 @@ footer {
 				</div>
             </div>
 			<a href="{% url 'pricing' %}" class="nav-item nav-link active">Pricing</a>
-			<a href="#" class="nav-item nav-link">Blog</a>
+			<a href="{% url 'menu' %}" class="nav-item nav-link">Menu</a>
 			<a href="#" class="nav-item nav-link">Contact</a>
         </div>
-		<form class="navbar-form form-inline search-form">
-			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search...">
-				<span class="input-group-btn">
-					<button type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
-				</span>
-			</div>
-		</form>
+<!--		<form class="navbar-form form-inline search-form">-->
+<!--			<div class="input-group">-->
+<!--				<input type="text" class="form-control" placeholder="Search...">-->
+<!--				<span class="input-group-btn">-->
+<!--					<button type="button" class="btn btn-default"><i class="fa fa-search"></i></button>-->
+<!--				</span>-->
+<!--			</div>-->
+<!--		</form>-->
 		<div class="navbar-nav ml-auto">
-			<div class="nav-item dropdown login-dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle"><i class="fa fa-user-o"></i> Login</a>
-<!--				-->
+			<div class="nav-item">
+				<a href="{% url 'signin' %}"><i class="fa fa-user-o"></i> Login</a>
+
             </div>
         </div>
 	</div>
@@ -240,10 +233,10 @@ footer {
 
 
 
-  <!-- Copyright -->
+
 
 </footer>
-<!-- Footer -->
+
 
 
 
