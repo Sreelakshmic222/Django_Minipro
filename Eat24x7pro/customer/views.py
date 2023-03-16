@@ -27,11 +27,14 @@ def mail(request):
 
 class Index(View):
     def get(selfself,request,*args,**kwargs):
-        return render(request,'customer/index.html')
+        return render(request,'customer/Home.html')
 
 class About(View):
     def get(selfself,request,*args,**kwargs):
         return render(request,'customer/about.html')
+class Pricing(View):
+    def get(selfself,request,*args,**kwargs):
+        return render(request,'customer/pricing.html')
 
 class Order(View):
     def get(self,request,*args,**kwargs):
