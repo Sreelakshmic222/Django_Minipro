@@ -26,7 +26,7 @@ def mail(request):
 
 
 class Index(View):
-    def get(selfself,request,*args,**kwargs):
+    def get(self,request,*args,**kwargs):
         return render(request,'customer/Home.html')
 
 class About(View):

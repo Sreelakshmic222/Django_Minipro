@@ -36,7 +36,8 @@ urlpatterns = [
     path('signin/',signin,name='signin'),
     path('signup/',signup,name='signup'),
     path('home/',home,name='home'),
-    path('mail/', views.mail)
+    path('mail/', views.mail),
+    path('del_person/',include('del_person.urls'))
 
 
 ]
