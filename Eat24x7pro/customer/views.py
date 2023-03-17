@@ -30,10 +30,10 @@ class Index(View):
         return render(request,'customer/Home.html')
 
 class About(View):
-    def get(selfself,request,*args,**kwargs):
+    def get(self,request,*args,**kwargs):
         return render(request,'customer/about.html')
 class Pricing(View):
-    def get(selfself,request,*args,**kwargs):
+    def get(self,request,*args,**kwargs):
         return render(request,'customer/pricing.html')
 
 class Order(View):

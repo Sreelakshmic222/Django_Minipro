@@ -33,16 +33,18 @@ font-size:15px;
 text-decoration:none;
 }
 .submit .btn-primary{
-  align:center;
+   align:center;
   color: #012733;
   display: inline-block;
   padding: 10px;
   height:20px;
   width: 100px;
   text-align: center;
+  border: 4px double #cccccc;
+  border-radius: 15px;
   font-size: 20px;
   cursor: zoom-in;
-  margin-top: 3px;
+  margin-top: 10px;
   margin-left: 100px;
   box-shadow: 0 5px #ADD8E6;
   transition:all 0.4s ease 0s;
@@ -70,8 +72,8 @@ font-weight:bold;
 background-color:White;
 }
 .btn{
-  height:30px;
-weight:100px;
+  height:40px;
+weight:150px;
 font-color:#012733;
 border-radius: 4px;
   background-color:white;
@@ -82,7 +84,6 @@ border-radius: 4px;
   font-size: 20px;
   transition: all 0.5s;
   cursor: pointer;
-  box-shadow: 0 5px #ADD8E6;
   transition:all 0.4s ease 0s;
 }
 .box p{
@@ -91,11 +92,11 @@ color:#0000CD;
 }
 p a{
 text-decoration:none;
-color:#B0E0E6;
+color:#FF0000;
 }
 .btn1 {
 font-color:#012733;
-border-radius: 4px;
+border-radius: 5px;
   background-color:white;
   border: none;
   border: 4px double #cccccc;
@@ -104,8 +105,7 @@ border-radius: 4px;
   font-size: 20px;
   transition: all 0.5s;
   cursor: pointer;
-  box-shadow: 0 5px #ADD8E6;
-  transition:all 0.4s ease 0s;
+  transition:all 0.3s ease 0s;
 }
 .button:hover {
 background-color: green;
