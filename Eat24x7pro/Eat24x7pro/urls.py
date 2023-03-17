@@ -38,6 +38,7 @@ urlpatterns = [
     path('signup/',signup,name='signup'),
     path('home/',home,name='home'),
     path('mail/', views.mail),
+    path('signout/',views.signout,name='signout'),
     path('del_person/',include('del_person.urls')),
 
 
