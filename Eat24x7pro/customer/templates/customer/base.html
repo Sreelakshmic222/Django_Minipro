@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width",initial-scale=1.0,shrink-to-fit=no">
     <title>Food Delievery app</title>
-
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
    <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Google Fonts -->
@@ -30,19 +30,25 @@
 {% include 'customer/navigation.html' %}
 <!--<img src="{% static 'images/Back.jpg' %}" alt="Image" class="im">-->
 {% block content %}
-<div class="container mb-5">
-    <div class="row justify-content-center mt-5">
-        <div class="'col-md-8 col-sm-12 offset-md-1 p-4 text-center">
-            <h1>Food Ordering System</h1>
-        </div>
+<!--<div class="container mb-5">-->
+<!--    <div class="row justify-content-center mt-5">-->
+<!--        <div class="'col-md-8 col-sm-12 offset-md-1 p-4 text-center">-->
+<!--            <div class="container">-->
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter">Welcome &nbsp {{user}}</h3>
     </div>
+  </div>
+</div>
+<!--        </div>-->
+<!--    </div>-->
 <!--    <div class="row justify-content-center mt-1">-->
 <!--        <div class="card col-md-5 col cm-12 offset-md-1 p-4 text-center">-->
 <!--           <h2>Place an Order!</h2>-->
 <!--            <button class="btn btn-outline-primary">Order Now</button>-->
 <!--        </div>-->
 <!--    </div>-->
-</div>
+<!--</div>-->
 {% endblock content %}
 
 {% include 'customer/footer.html' %}
