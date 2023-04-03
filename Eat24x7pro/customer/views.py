@@ -160,6 +160,7 @@ def signin(request):
 
     return render(request, 'customer/signin.html')
 
+
 def signout(request):
     logout(request)
     messages.success(request, 'Logged out Successfully!')

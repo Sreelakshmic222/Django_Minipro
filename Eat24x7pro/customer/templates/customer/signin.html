@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,16 +14,17 @@
     <title>Sign-In</title>
     <link rel="stylesheet" href="{% static 'css/signin.css' %}">
   </head>
-  <body style="background:url('https://wallpapercave.com/wp/wp4076090.jpg')no-repeat;background-size:cover;">
-  <nav>
-    <div class="logo">
-        <p align="Center" style="background-color:tomato;">Hey,Sign to Explore!</p>
-    </div>
-  </nav>
-  <br><br>
-    <div class="box">
-      <h1 style="background-color:tomato;">Login</h1>
-      <form method="POST" class="frm">
+  <body style="background:url('https://www.wallpaperflare.com/static/467/176/26/background-food-tasty-olives-wallpaper.jpg')no-repeat;background-size:cover;">
+
+<div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+      <form method="POST" class="login-form">
         {% csrf_token %}
         <input type="text" class="username" name="username" id="username" placeholder="Enter username" required/><br />
         <input type="password" class="pass1" name="pass1" id="pass1" placeholder="Enter password" required/><br />
@@ -33,14 +34,15 @@
         <div class="submit">
           <button class="btn-primary" >Login</button>
         </div>
-      </form>
-      <p style="background-color:tomato;">
+           <p>
         Don't have an account?
         <a href="{% url 'signup' %}">Create an account</a>.
       </p>
-      <div class="fb">
-        <a href=""><button><i class="fa-brands fa-square-facebook"></i>Login with Facebook</button></a>&nbsp&nbsp&nbsp<a href=""><button><i class="fa-brands fa-google"></i>Login with Google</button></a>&nbsp&nbsp&nbsp<a href=""><button><span class="bi bi-github"></span>Login with HitHub</button></a>
-      </div>
+<!--      <div class="fb">-->
+<!--        <a href=""><button><i class="fa-brands fa-square-facebook"></i>Login with Facebook</button></a>&nbsp&nbsp&nbsp<a href=""><button><i class="fa-brands fa-google"></i>Login with Google</button></a>&nbsp&nbsp&nbsp<a href=""><button><span class="bi bi-github"></span>Login with HitHub</button></a>-->
+<!--      </div>-->
+      </form>
+
     </div>
   </body>
 </html>
