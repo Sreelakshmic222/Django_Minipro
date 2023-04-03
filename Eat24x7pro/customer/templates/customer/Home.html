@@ -133,17 +133,75 @@ body {
 }
 
 footer {
- margin-top:400px;
+ margin-top:570px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   margin-bottom:0px;
   background-color:#1e0f24;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #2f1a2f;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+  display: grid;
+  place-items: right;
+  text-align: right;
+  margin-left:200px;
+  height: 100vh
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
 </style>
 </head>
 
-<body style="background:url('https://www.semiosissoftware.com/wp-content/uploads/2020/01/Food-Ordering-System.jpg')no-repeat;background-size:cover;">
+<body style="background:url('https://www.gcpr.net/wp-content/uploads/2020/04/bigstock-Healthy-Food-Background-Healt-293787757-1.jpg')no-repeat;background-size:cover;">
 <nav class="navbar navbar-expand-lg navbar-white">
 	<a href="{% url 'home' %}" class="navbar-brand">Eat<b>24x7</b></a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -176,127 +234,23 @@ footer {
         </div>
 	</div>
 </nav>
+<div class="container">
+  <h2 class="title">
+    <span class="title-word title-word-1">Be</span><br>
+    <span class="title-word title-word-2">Fresh</span><br>
+    <span class="title-word title-word-3">Eat</span><br>
+    <span class="title-word title-word-4">fresh</span>
+  </h2>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.js"></script>
 </body>
 
-<footer class="text-center text-white" style="background-color: #1e0f24 ;">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!-- Section: Images -->
-    <section class="">
-      <div class="row">
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
-              class="w-100"
-            /><br>Belgium
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
-              class="w-100"
-            /><br>Cuba
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
-              class="w-100"
-            /><br>Paris
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
-              class="w-100"
-            /><br>India
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
-              class="w-100"
-            /><br>Switzerland
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
-              class="w-100"
-            />
-              <br>Paris
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section: Images -->
-  </div>
-  <!-- Grid container -->
 
+  <!-- Grid container -->
+<footer>
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     ©Copyright:
     <a class="text-white" href="https://mdbootstrap.com/">Eat24x7</a>
   </div>
