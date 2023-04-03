@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap Navbar with Inline Login Form in Dropdown</title>
+<title>Home</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@ body {
 	border-color: #dfe3e8;
 }
 .navbar {
-	background: #fff;
+	background: #1e0f24;
 	padding-left: 16px;
 	padding-right: 16px;
 	border-bottom: 1px solid #dfe3e8;
@@ -37,8 +37,11 @@ body {
 .navbar .navbar-brand b {
 	color: red;
 }
+.navbar a{
+color:white;
+}
 .navbar a, .navbar a:active {
-	color: #999;
+	color: blue;
 	background: transparent;
 }
 .navbar .navbar-nav a:hover, .navbar .navbar-nav a:focus {
@@ -130,13 +133,18 @@ body {
 }
 
 footer {
-  margin-top: auto;
+ margin-top:400px;
+  margin-bottom:0px;
+  background-color:#1e0f24;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 </style>
 </head>
 
 <body style="background:url('https://www.semiosissoftware.com/wp-content/uploads/2020/01/Food-Ordering-System.jpg')no-repeat;background-size:cover;">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-white">
 	<a href="{% url 'home' %}" class="navbar-brand">Eat<b>24x7</b></a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
@@ -172,59 +180,127 @@ footer {
 <script src="/js/bootstrap.js"></script>
 </body>
 
-    <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="https://www.facebook.com/Eating24x7/" class="me-4 text-reset">
-        <span class="bi bi-facebook"></span>
-      </a>
-      <a href="https://twitter.com/Eating24x7" class="me-4 text-reset">
-        <span class="bi bi-twitter"></span>
-      </a>
-      <a href="https://magicpin.in/Gurgaon/Sector-14/Restaurant/Eat-24X7/store/443633/" class="me-4 text-reset">
-        <span class="bi bi-google"></span>
-      </a>
-      <a href="https://www.instagram.com/explore/tags/eat24x7/?hl=en" class="me-4 text-reset">
-        <span class="bi bi-instagram"></span>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <span class="bi bi-linkedin"></span>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <span class="bi bi-github"></span>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>@Eat24x7.com
-              <span class='bi bi-cart-fill'></span>
-          </h6>
-            ©Copyright:<span class='bi bi-emoji-wink-fill'></span>
-    <a class="text-reset fw-bold" href="{}">SAS</a>
-          <p>
-
-          </p>
+<footer class="text-center text-white" style="background-color: #1e0f24 ;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Images -->
+    <section class="">
+      <div class="row">
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+              class="w-100"
+            /><br>Belgium
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
         </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+              class="w-100"
+            /><br>Cuba
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+              class="w-100"
+            /><br>Paris
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+              class="w-100"
+            /><br>India
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+              class="w-100"
+            /><br>Switzerland
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+              class="w-100"
+            />
+              <br>Paris
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Images -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    ©Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">Eat24x7</a>
+  </div>
+  <!-- Copyright -->
 </footer>
 </html>
 
