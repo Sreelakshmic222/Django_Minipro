@@ -66,3 +66,8 @@ margin-bottom: 26px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+nav{
+	background-color: #1e0f24;
+	border-bottom: 1px solid #dfe3e8;
+	border-radius: 0;
+}
