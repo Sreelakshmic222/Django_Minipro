@@ -31,6 +31,12 @@ class Index(View):
 class About(View):
     def get(self,request,*args,**kwargs):
         return render(request,'customer/about.html')
+
+def contact(request):
+    template="customer/contact.html"
+    context={}
+    return render(request,template,context)
+
 class Pricing(View):
     def get(self,request,*args,**kwargs):
         return render(request,'customer/pricing.html')
