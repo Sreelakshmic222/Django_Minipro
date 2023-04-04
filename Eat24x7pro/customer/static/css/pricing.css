@@ -71,3 +71,14 @@ display:nonee;
 .btn--active{
 display:inline-block;}
 
+.navbar {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+	background-color: #1e0f24;
+	border-bottom: 1px solid #dfe3e8;
+	margin-top:0px;
+	height:200px;
+	width:100%;
+	border-radius: 0;
+}
