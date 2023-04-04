@@ -11,14 +11,20 @@ footer {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
+footer div{
+height:40px;
+margin-top:8px;
+font-size:20px;
+align:center;
+color:blue;
+}
+footer div a{
+margin-top:2px;
+margin-bottom:2px;
+color:red;
+}
 .navbar {
 	background-color: #1e0f24;
 	border-bottom: 1px solid #dfe3e8;
 	border-radius: 0;
-}
-footer div{
-color:blue;
-}
-footer div a{
-color:red;
 }
