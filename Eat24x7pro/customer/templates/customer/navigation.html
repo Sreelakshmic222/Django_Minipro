@@ -16,12 +16,27 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'order' %}" class="btn btn-outline-primary">Food Order!</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'signout' %}" class="btn btn-outline-primary">Sign Out</a>
-      </li>
+    </ul>
+      <div class="btn-group dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:20px">
+              {{user}}
+          </a>
+<!--          Login conditions-->
+          <div class="dropdown-menu">
+              {%if user.is_authenticated%}
+              <a class="dropdown-item" href="{% url 'home'%}">Logout</a>
+              {% else %}
+              <a class="dropdown-item text-secondary" href="{% url 'signin'%}">Login</a>
+              <a class="dropdown-item text-secondary" href="{% url 'signup'%}">Register</a>
+              {% endif %}
+          </div>
+      </div>
+
+<!--      <a class="nav-link" href="{% url 'signout' %}" class="btn btn-outline-primary">Sign Out</a>-->
+<!--      </li>-->
 <!--      <li class="nav-item">-->
 <!--        <a class="nav-link" href="{% url 'signup' %}" class="btn btn-outline-primary">Register</a>-->
 <!--      </li>-->
-    </ul>
+<!--    </ul>-->
   </div>
 </nav>
