@@ -114,12 +114,25 @@ body {
 }
 
 footer {
- margin-top:400px;
+ margin-top:570px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   margin-bottom:0px;
   background-color:#1e0f24;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+}
+footer div{
+height:40px;
+margin-top:8px;
+font-size:20px;
+align:center;
+color:blue;}
+footer div a{
+color:red;
 }
 img{
 background: url("static/images/log.jpg")50% 0 no-repeat fixed;
