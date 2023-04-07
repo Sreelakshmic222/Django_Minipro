@@ -29,3 +29,6 @@ class OrderDetails(View):
         return render(request,'restaurant/order-detail.html',context)
 
 
+class RSignUp(View):
+    def get(self,request,*args,**kwargs):
+        return render(request,'restaurant/rsignup.html')

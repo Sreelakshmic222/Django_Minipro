@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import Dashboard,OrderDetails
+from .views import Dashboard,OrderDetails,RSignUp
 urlpatterns=[
     path('dashboard/',Dashboard.as_view(),name='dashboard'),
-    path('orders/<int:pk>/',OrderDetails.as_view(),name='order-details')
+    path('orders/<int:pk>/',OrderDetails.as_view(),name='order-details'),
+    path('rsignup/',RSignUp.as_view(),name='rsignup'),
 
 ]
