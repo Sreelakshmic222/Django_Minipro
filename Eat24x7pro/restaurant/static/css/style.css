@@ -1,0 +1,75 @@
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:url('https://i.pinimg.com/736x/d2/81/20/d28120e17fff92b90f26f88d10ce87dc.jpg')no-repeat;background-size:cover;
+background-size:cover;
+
+}
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:10px 100px;
+background:#1e0f24;
+display:right;
+justify-content:space-between;
+align-items:center;
+z-index:90;
+}
+header h2{
+color:white;
+}
+.logo{
+font-size:2rem;
+user-select:none;
+}
+.navigation a{
+position:relative;
+font-size:1.1rem;
+color:#75E6DA;
+text-decoration:none;
+font--weight:500;
+margin:left:40px;
+}
+.navigation a::after{
+content:'';
+left:0;
+bottom:-6px;
+border-radius:5px;
+position:absolute;
+width:100%;
+height:3px;
+background:#fff;
+transform:scaleX(0);
+transition:transform .5s;
+}
+.navigation a:hover::after{
+transform:scaleX(1);
+}
+.navigation .btnLogin-popup{
+width:100px;
+height:40px;
+background:transparent;
+border:2px solid red;
+outline:none;
+color:white;
+font-size:1.1rem;
+border-radius:3px;
+cursor:pointer;
+font-weight:100;
+margin-left:40px;
+transition:.5s;
+}
+.navigation .btnLogin-popup:hover{
+background:yellow;
+color:#162938;
+}
