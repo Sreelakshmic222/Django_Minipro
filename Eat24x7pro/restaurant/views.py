@@ -33,9 +33,10 @@ class OrderDetails(View):
 
 def rsignup(request):
     if request.method == 'POST':
-        email = request.POST['email']
+        email = request.POST.get('email')
         username = request.POST['username']
         password = request.POST['password']
+
 
         myuser = User.objects.create_user(email,username,password)
 
