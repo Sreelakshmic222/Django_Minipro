@@ -1,5 +1,7 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 from django.utils.timezone import datetime
@@ -30,34 +32,59 @@ class OrderDetails(View):
         }
         return render(request,'restaurant/order-detail.html',context)
 
+@login_required(login_url='rsignin')
+def HomePage(request):
+    return render(request, 'restaurant/dashboard.html')
 
 def rsignup(request):
     if request.method == 'POST':
+
         email = request.POST.get('email')
-        username = request.POST['username']
-        password = request.POST['password']
-
-
-        myuser = User.objects.create_user(email,username,password)
-
-        myuser.save()
-
+        uname = request.POST.get('username')
+        pass1 = request.POST.get('password')
+        my_user = User.objects.create_user(uname, email, pass1)
+        my_user.save()
         return redirect('rsignin')
 
     return render(request, 'restaurant/rsignup.html')
+    # if request.method == 'POST':
+    #     email = request.POST.get('email')
+    #     username = request.POST['username']
+    #     password = request.POST['password']
+    #
+    #
+    #     myuser = User.objects.create_user(email,username,password)
+    #
+    #     myuser.save()
+    #
+    #     return redirect('rsignin')
+    #
+    # return render(request, 'restaurant/rsignup.html')
 
 def rsignin(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
-
+        username = request.POST.get('username')
+        pass1 = request.POST.get('password')
+        user = authenticate(request, username=username, password=pass1)
         if user is not None:
             login(request, user)
-            fname = user.username
-            return render(request, 'restaurant/dashboard.html', {'fname': fname})
-
+            return redirect('rhome')
         else:
-            return redirect('dashboard')
+            return HttpResponse("Username or Password is incorrect!!!")
 
     return render(request, 'restaurant/rsignin.html')
+    # if request.method == 'POST':
+    #     username = request.POST.get('username')
+    #     password = request.POST.get('password')
+    #     user = authenticate(request,username=username, password=password)
+    #
+    #     if user is not None:
+    #         login(request, user)
+    #         fname = user.username
+    #         return render(request, 'restaurant/dashboard.html', {'fname': fname})
+    #
+    #     else:
+    #         return redirect('rsignin')
+    #
+    # return render(request, 'restaurant/rsignin.html')
+
