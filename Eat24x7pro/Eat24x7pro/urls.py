@@ -25,7 +25,6 @@ from customer import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/',include('restaurant.urls')),
-    path('dlvp/',include('dlvp.urls')),
     path('',Index.as_view(),name='index'),
     path('about/',About.as_view(),name='about'),
     path('menu/',Menu.as_view(),name='menu'),
@@ -40,7 +39,6 @@ urlpatterns = [
     path('home/',home,name='home'),
     path('mail/', views.mail),
     path('signout/',views.signout,name='signout'),
-    path('del_person/',include('del_person.urls')),
 
 
 
