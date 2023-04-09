@@ -10,13 +10,23 @@
 
     <title>Home Page</title>
   </head>
-  <body>
-    <h1>Home Page</h1>
+  <body style="background:url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-restaurant-menu-background-material-image_154163.jpg')no-repeat;background-size:cover;">
+  <nav class="navbar navbar-expand-lg navbar" style="background-color:#1e0f24;">
+  <a class="navbar-brand" href="#">Eat24x7</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="{%url 'dlogout'%}"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+      </ul>
+  </div>
+</nav>
     {% block content %}
     <div class="container">
         <div class="row justify-content-center mt-3">
             <div class="card col-md-5 mr-3">
-                <h4 class="text-center pt-2">Today's Total Revenue</h4>
+                <h4 class="text-center pt-2">Your Journey Begins</h4>
 <!--                <h1 class="text-center" style="color: green;">${{ total_revenue }}</h1>-->
             </div>
 
