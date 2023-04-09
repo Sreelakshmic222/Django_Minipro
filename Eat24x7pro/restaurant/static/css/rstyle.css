@@ -1,0 +1,81 @@
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:url('https://i.pinimg.com/736x/d2/81/20/d28120e17fff92b90f26f88d10ce87dc.jpg')no-repeat;background-size:cover;
+background-size:cover;
+
+}
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:10px 100px;
+background:#1e0f24;
+display:right;
+justify-content:space-between;
+align-items:center;
+z-index:90;
+}
+
+header h2{
+color:white;
+}
+.logo{
+font-size:2rem;
+user-select:none;
+}
+.navigation a{
+position:relative;
+font-size:1.1rem;
+color:#75E6DA;
+text-decoration:none;
+font--weight:500;
+margin:left:40px;
+}
+.navigation a::after{
+content:'';
+left:0;
+bottom:-6px;
+border-radius:5px;
+position:absolute;
+width:100%;
+height:3px;
+background:#fff;
+transform:scaleX(0);
+transition:transform .5s;
+}
+.navigation a:hover::after{
+transform:scaleX(1);
+}
+.wrapper{
+margin-top:150px;
+position:relative;
+width:400px;
+height:440px;
+background:transparent;
+border:2px solid rgba(225,225,225,0.5);
+border-radius:20px;
+backdrop-filter:blur(20px);
+border-shadow:0 0 30px rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+transition:height .2s ease;
+}
+
+.wrapper.active{
+height:520px;
+}
+.wrapper .form-box{
+width:100%;
+padding:40px;
+}

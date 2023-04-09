@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
 from django.views import View
 from django.utils.timezone import datetime
 from customer.models import OrderModel
@@ -29,6 +31,32 @@ class OrderDetails(View):
         return render(request,'restaurant/order-detail.html',context)
 
 
-class RSignUp(View):
-    def get(self,request,*args,**kwargs):
-        return render(request,'restaurant/rsignup.html')
+def rsignup(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        username = request.POST['username']
+        password = request.POST['password']
+
+        myuser = User.objects.create_user( email,username,password)
+
+        myuser.save()
+
+        return redirect('rsignin')
+
+    return render(request, 'restaurant/rsignup.html')
+
+def rsignin(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            fname = user.username
+            return render(request, 'restaurant/dashboard.html', {'fname': fname})
+
+        else:
+            return redirect('rsignin')
+
+    return render(request, 'restaurant/rsignin.html')
