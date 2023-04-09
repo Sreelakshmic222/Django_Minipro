@@ -48,8 +48,8 @@ def rsignup(request):
 
 def rsignin(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        username = request.POST['username']
+        password = request.POST['password']
         user = authenticate(username=username, password=password)
 
         if user is not None:
@@ -58,6 +58,6 @@ def rsignin(request):
             return render(request, 'restaurant/dashboard.html', {'fname': fname})
 
         else:
-            return redirect('rsignin')
+            return redirect('dashboard')
 
     return render(request, 'restaurant/rsignin.html')
