@@ -19,6 +19,12 @@
 body{
     background:url('https://cdn.dribbble.com/users/1520198/screenshots/4728543/delivery_boy_animation.gif')no-repeat;background-size:cover;
 }
+.navbar {
+	background-color: #1e0f24;
+	border-bottom: 2px solid #dfe3e8;
+	border-radius: 0;
+	height:50px;
+}
 .background{
    background:url('https://i.pinimg.com/736x/d2/81/20/d28120e17fff92b90f26f88d10ce87dc.jpg')no-repeat;background-size:cover;
     width: 430px;
@@ -114,6 +120,17 @@ button{
     </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar" style="background-color:#1e0f24;">
+  <a class="navbar-brand" href="{%url 'home'%}" style="text-decoration:none; color:white;font-size:20px;">Eat24x7</a>
+<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--  </button>-->
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="{%url 'rlogout'%}" style="text-decoration:none; color:blue;font-size:15px;"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+      </ul>
+  </div>
+</nav>
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
