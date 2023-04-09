@@ -37,7 +37,7 @@ def rsignup(request):
         username = request.POST['username']
         password = request.POST['password']
 
-        myuser = User.objects.create_user( email,username,password)
+        myuser = User.objects.create_user(email,username,password)
 
         myuser.save()
 
