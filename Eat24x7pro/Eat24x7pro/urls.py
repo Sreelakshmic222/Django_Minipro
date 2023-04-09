@@ -25,6 +25,7 @@ from customer import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/',include('restaurant.urls')),
+    path('delivery/',include('delivery.urls')),
     path('',Index.as_view(),name='index'),
     path('about/',About.as_view(),name='about'),
     path('menu/',Menu.as_view(),name='menu'),
